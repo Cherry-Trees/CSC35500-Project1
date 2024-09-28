@@ -10,7 +10,7 @@
 // Construct a global umap containing process ID's and commands as key-value pairs.
 unordered_map<int, Command> processUMap;
 
-void backgroundedProcessHandler(int sigCode)
+void backgroundedProcessHandler(int)
 {
   // Get the pid of the completed child process.
   int pid = waitpid(0, NULL, WNOHANG); 
